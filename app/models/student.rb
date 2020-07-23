@@ -5,6 +5,7 @@ class Student < ActiveRecord::Base
         "#{self.first_name} #{self.last_name}"
     end
     def self.all_in_grade(grade)
-        self.all.select {|student| student.grade_level == grade}
+        instances_in_grade = GradeLevel.all.select {|grade_level| grade_level.grade_level == grade}
+        instances_in_grade.map {|instance| instance.student}
     end
 end
