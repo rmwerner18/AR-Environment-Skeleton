@@ -32,5 +32,9 @@ GradeLevel.create(grade_level: "tenth", teacher: briski, student: alyssa)
 GradeLevel.create(grade_level: "ninth", teacher: blue, student: james)
 GradeLevel.create(grade_level: "twelfth", teacher: blue, student: phil)
 
+biology_exam = Exam.create(name: "Intro to Biology", teacher_id: johnson.id, topic: "Biology")
+comp_sci_exam = Exam.create(name: "Intro to Algorithms", teacher_id: white.id, topic: "Computer Science")
 
-
+madison_biology = StudentExam.create(student_id: madison.id, exam_id: biology_exam.id)
+alyssa_biology = StudentExam.create(student_id: alyssa.id, exam_id: biology_exam.id)
+madison_comp_sci = StudentExam.create(student_id: madison.id, exam_id: comp_sci_exam.id)
