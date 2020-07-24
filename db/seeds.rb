@@ -2,6 +2,7 @@ Student.delete_all
 Teacher.delete_all
 GradeLevel.delete_all
 School.delete_all
+Exam.delete_all
 
 adams = School.create(name: "Adams High School", mascot: "highlander")
 rhs = School.create(name: "Rochester High School", mascot: "falcons")
